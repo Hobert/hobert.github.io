@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "date": "2026-03-01",
+    "title": "项目初始化",
+    "category": "research",
+    "hours": 4,
+    "description": "完成个人主页项目的初始化工作，设置了基本框架和样式",
+    "status": "已完成"
+  },
+  {
+    "id": "2",
+    "date": "2026-03-02",
+    "title": "响应式设计",
+    "category": "coding",
+    "hours": 3,
+    "description": "实现网页的响应式设计，适配各种屏幕尺寸",
+    "status": "已完成"
+  },
+  {
+    "id": "3",
+    "date": "2026-03-03",
+    "title": "研究日志功能",
+    "category": "research",
+    "hours": 5,
+    "description": "开发每日工作记录功能，支持添加、编辑和删除记录",
+    "status": "进行中"
+  }
+]
