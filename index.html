@@ -11,14 +11,15 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="个人主页形象.jpg">
     <title>肖宏博 - 个人学术主页</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a2463'/><text y='.9em' font-size='65' x='50%' dominant-baseline='top' text-anchor='middle' font-family='sans-serif' fill='white'>肖</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -37,10 +38,18 @@
                 <li><a href="#experience">校园经历</a></li>
                 <li><a href="#contact">联系方式</a></li>
             </ul>
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索全站内容...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
             <div class="nav-social">
-                <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                <!-- 请将 href="#" 替换为真实的个人主页链接 -->
+                <a href="#" class="social-icon" title="GitHub" onclick="event.preventDefault()"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon" title="LinkedIn" onclick="event.preventDefault()"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon" title="ResearchGate" onclick="event.preventDefault()"><i class="fab fa-researchgate"></i></a>
                 <button class="theme-toggle" id="themeToggle" title="切换深色模式">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -101,7 +110,7 @@
                 <div class="documents-section">
                     <h3 class="documents-title">📄 个人文档</h3>
                     <div class="documents-grid">
-                        <a href="成绩单+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="成绩单+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -111,7 +120,7 @@
                             </div>
                             <i class="fas fa-external-link-alt document-arrow"></i>
                         </a>
-                        <a href="个人陈述+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="个人陈述+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -121,7 +130,7 @@
                             </div>
                             <i class="fas fa-external-link-alt document-arrow"></i>
                         </a>
-                        <a href="个人简历+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="个人简历+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -407,67 +416,67 @@
                 <div class="certificates-carousel">
                     <div class="certificates-track" id="certificatesTrack">
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/巡航国一.jpg')">
-                            <img src="获奖证书/巡航国一.jpg" alt="巡航国一" class="carousel-image">
+                            <img src="获奖证书/巡航国一.jpg" alt="巡航国一" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/24射击1.jpg')">
-                            <img src="获奖证书/24射击1.jpg" alt="射击国一" class="carousel-image">
+                            <img src="获奖证书/24射击1.jpg" alt="射击国一" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/25算法精英.jpg')">
-                            <img src="获奖证书/25算法精英.jpg" alt="算法精英" class="carousel-image">
+                            <img src="获奖证书/25算法精英.jpg" alt="算法精英" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/145624国赛二等奖.jpg')">
-                            <img src="获奖证书/145624国赛二等奖.jpg" alt="国赛二等奖" class="carousel-image">
+                            <img src="获奖证书/145624国赛二等奖.jpg" alt="国赛二等奖" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/145624省赛一等奖.jpg')">
-                            <img src="获奖证书/145624省赛一等奖.jpg" alt="省赛一等奖" class="carousel-image">
+                            <img src="获奖证书/145624省赛一等奖.jpg" alt="省赛一等奖" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/创新湛江杯.jpg')">
-                            <img src="获奖证书/创新湛江杯.jpg" alt="创新湛江杯" class="carousel-image">
+                            <img src="获奖证书/创新湛江杯.jpg" alt="创新湛江杯" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/肖宏博蓝桥杯.jpg')">
-                            <img src="获奖证书/肖宏博蓝桥杯.jpg" alt="蓝桥杯" class="carousel-image">
+                            <img src="获奖证书/肖宏博蓝桥杯.jpg" alt="蓝桥杯" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/4级.png')">
-                            <img src="获奖证书/4级.png" alt="英语四级" class="carousel-image">
+                            <img src="获奖证书/4级.png" alt="英语四级" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/NCDA1.png')">
-                            <img src="获奖证书/NCDA1.png" alt="NCDA大赛" class="carousel-image">
+                            <img src="获奖证书/NCDA1.png" alt="NCDA大赛" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/爱在广东.png')">
-                            <img src="获奖证书/爱在广东.png" alt="爱在广东" class="carousel-image">
+                            <img src="获奖证书/爱在广东.png" alt="爱在广东" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251115001358_993_137.jpg')">
-                            <img src="获奖证书/微信图片_20251115001358_993_137.jpg" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/微信图片_20251115001358_993_137.jpg" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251115001401_995_137.jpg')">
-                            <img src="获奖证书/微信图片_20251115001401_995_137.jpg" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/微信图片_20251115001401_995_137.jpg" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/第七届中国高校智能机器人创意大赛选拔赛.jpg')">
-                            <img src="获奖证书/第七届中国高校智能机器人创意大赛选拔赛.jpg" alt="智能机器人创意大赛" class="carousel-image">
+                            <img src="获奖证书/第七届中国高校智能机器人创意大赛选拔赛.jpg" alt="智能机器人创意大赛" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/在2023年第五届国际青年人工智能大赛-中国赛区选拔赛.jpg')">
-                            <img src="获奖证书/在2023年第五届国际青年人工智能大赛-中国赛区选拔赛.jpg" alt="国际青年人工智能大赛" class="carousel-image">
+                            <img src="获奖证书/在2023年第五届国际青年人工智能大赛-中国赛区选拔赛.jpg" alt="国际青年人工智能大赛" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-07_22-45-28.png')">
-                            <img src="获奖证书/PixPin_2025-11-07_22-45-28.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-07_22-45-28.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_16-20-20.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_16-20-20.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-13_16-20-20.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_17-14-38.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_17-14-38.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-13_17-14-38.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_17-15-56.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_17-15-56.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-13_17-15-56.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_22-37-32.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_22-37-32.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-13_22-37-32.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-15_15-44-58.png')">
-                            <img src="获奖证书/PixPin_2025-11-15_15-44-58.png" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/PixPin_2025-11-15_15-44-58.png" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                         <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251127213732_1196_137.jpg')">
-                            <img src="获奖证书/微信图片_20251127213732_1196_137.jpg" alt="获奖证书" class="carousel-image">
+                            <img src="获奖证书/微信图片_20251127213732_1196_137.jpg" alt="获奖证书" loading="lazy" class="carousel-image">
                         </div>
                     </div>
                 </div>
@@ -852,7 +861,7 @@
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content" id="lightboxImage">
+        <img id="lightbox-img" class="lightbox-content" alt="证书预览">
     </div>
 
     <script>
@@ -950,13 +959,141 @@
 
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             if (document.body.classList.contains('dark-mode')) {
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('theme', 'dark');
             } else {
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                 localStorage.setItem('theme', 'light');
+            }
+            updateCharts();
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchResults = document.getElementById('searchResults');
+
+        let searchData = [];
+
+        function initSearchData() {
+            const sections = document.querySelectorAll('section[id]');
+            searchData = [];
+            
+            sections.forEach(section => {
+                const sectionId = section.getAttribute('id');
+                const sectionTitle = section.querySelector('.section-title')?.textContent || sectionId;
+                
+                const sectionData = {
+                    id: sectionId,
+                    title: sectionTitle,
+                    section: sectionTitle,
+                    content: '',
+                    link: `#${sectionId}`
+                };
+                
+                const textElements = section.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, .journal-title, .project-title, .award-title');
+                textElements.forEach(el => {
+                    sectionData.content += ' ' + el.textContent;
+                });
+                
+                searchData.push(sectionData);
+            });
+            
+            if (records.length > 0) {
+                records.forEach(record => {
+                    searchData.push({
+                        id: `journal-${record.id}`,
+                        title: record.title,
+                        section: '研究日志',
+                        content: `${record.description || ''} ${getCategoryLabel(record.category)}`,
+                        link: '#journal',
+                        isJournal: true
+                    });
+                });
+            }
+        }
+
+        function performSearch(query) {
+            if (!query.trim()) {
+                searchResults.classList.remove('show');
+                return;
+            }
+            
+            const lowerQuery = query.toLowerCase();
+            const results = searchData.filter(item => {
+                return item.title.toLowerCase().includes(lowerQuery) ||
+                       item.content.toLowerCase().includes(lowerQuery) ||
+                       item.section.toLowerCase().includes(lowerQuery);
+            });
+            
+            displayResults(results, query);
+        }
+
+        function displayResults(results, query) {
+            if (results.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-search"></i>
+                        <p>没有找到"${escapeHtml(query)}"相关内容</p>
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = results.slice(0, 10).map(item => `
+                    <div class="search-result-item" onclick="goToResult('${item.link}')">
+                        <div class="search-result-title">${highlightText(item.title, query)}</div>
+                        <div class="search-result-section">${item.section}</div>
+                        <div class="search-result-preview">${highlightText(item.content.substring(0, 100), query)}...</div>
+                    </div>
+                `).join('');
+            }
+            
+            searchResults.classList.add('show');
+        }
+
+        function highlightText(text, query) {
+            if (!query.trim()) return escapeHtml(text);
+            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+            return escapeHtml(text).replace(regex, '<mark>$1</mark>');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        window.goToResult = function(link) {
+            searchResults.classList.remove('show');
+            searchInput.value = '';
+            document.querySelector(link).scrollIntoView({ behavior: 'smooth' });
+        };
+
+        let searchTimeout;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 300);
+        });
+
+        searchBtn.addEventListener('click', () => {
+            performSearch(searchInput.value);
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(searchInput.value);
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) {
+                searchResults.classList.remove('show');
             }
         });
 
@@ -1112,6 +1249,7 @@
             localStorage.setItem('journalRecords', JSON.stringify(localRecords));
             records = localRecords;
             renderRecords();
+            initSearchData();
         }
 
         function updateLocalRecord(id, record) {
@@ -1122,6 +1260,7 @@
                 localStorage.setItem('journalRecords', JSON.stringify(localRecords));
                 records = localRecords;
                 renderRecords(getCurrentFilter(), journalSearch.value);
+                initSearchData();
             }
         }
 
@@ -1218,6 +1357,7 @@
             }
 
             updateStats();
+            updateCharts();
         }
 
         function escapeHtml(text) {
@@ -1262,6 +1402,7 @@
             records = localRecords.filter(r => r.id != id);
             localStorage.setItem('journalRecords', JSON.stringify(records));
             renderRecords(getCurrentFilter(), journalSearch.value);
+            initSearchData();
         }
 
         function getCurrentFilter() {
@@ -1297,6 +1438,7 @@
                 loadFromLocal();
             }
             renderRecords(getCurrentFilter(), journalSearch.value);
+            initSearchData();
         }
 
         function loadFromLocal() {
@@ -1418,6 +1560,16 @@
             updateMonthlyChart();
         }
 
+        function getChartTheme() {
+            const isDark = document.body.classList.contains('dark-mode');
+            return {
+                textColor: isDark ? '#94a3b8' : '#4a4a6a',
+                barColor: isDark ? '#60a5fa' : '#0a2463',
+                barBorder: isDark ? '#93c5fd' : '#1e3a8a',
+                borderColor: isDark ? '#1e293b' : '#ffffff'
+            };
+        }
+
         function updateCategoryChart() {
             const ctx = document.getElementById('categoryChart').getContext('2d');
             const categoryData = {};
@@ -1427,9 +1579,10 @@
             const labels = Object.keys(categoryData).map(c => getCategoryLabel(c));
             const data = Object.values(categoryData);
             const colors = [
-                '#1e40af', '#166534', '#92400e', '#9d174d', 
+                '#1e40af', '#166534', '#92400e', '#9d174d',
                 '#6d28d9', '#0f766e', '#c2410c', '#1e3a8a'
             ];
+            const theme = getChartTheme();
             if (categoryChart) categoryChart.destroy();
             categoryChart = new Chart(ctx, {
                 type: 'doughnut',
@@ -1439,7 +1592,7 @@
                         data: data,
                         backgroundColor: colors.slice(0, labels.length),
                         borderWidth: 2,
-                        borderColor: '#fff'
+                        borderColor: theme.borderColor
                     }]
                 },
                 options: {
@@ -1447,11 +1600,13 @@
                     maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            position: 'bottom'
+                            position: 'bottom',
+                            labels: { color: theme.textColor }
                         },
                         title: {
                             display: true,
-                            text: '各类别工作时长分布'
+                            text: '各类别工作时长分布',
+                            color: theme.textColor
                         }
                     }
                 }
@@ -1468,6 +1623,7 @@
             const sortedMonths = Object.keys(monthlyData).sort();
             const labels = sortedMonths.map(m => m.replace('-', '年') + '月');
             const data = sortedMonths.map(m => monthlyData[m]);
+            const theme = getChartTheme();
             if (monthlyChart) monthlyChart.destroy();
             monthlyChart = new Chart(ctx, {
                 type: 'bar',
@@ -1476,8 +1632,8 @@
                     datasets: [{
                         label: '工作时长(小时)',
                         data: data,
-                        backgroundColor: '#0a2463',
-                        borderColor: '#1e3a8a',
+                        backgroundColor: theme.barColor,
+                        borderColor: theme.barBorder,
                         borderWidth: 1
                     }]
                 },
@@ -1487,23 +1643,23 @@
                     plugins: {
                         title: {
                             display: true,
-                            text: '每月工作时长趋势'
+                            text: '每月工作时长趋势',
+                            color: theme.textColor
+                        },
+                        legend: {
+                            labels: { color: theme.textColor }
                         }
                     },
                     scales: {
+                        x: { ticks: { color: theme.textColor } },
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            ticks: { color: theme.textColor }
                         }
                     }
                 }
             });
         }
-
-        const originalRenderRecords = renderRecords;
-        renderRecords = function(filter = 'all', searchText = '') {
-            originalRenderRecords(filter, searchText);
-            updateCharts();
-        };
 
         let currentSlide = 0;
         const slides = document.querySelectorAll('.certificate-slide');
