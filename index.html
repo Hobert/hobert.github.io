@@ -11,14 +11,15 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="个人主页形象.jpg">
     <title>肖宏博 - 个人学术主页</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a2463'/><text y='.9em' font-size='65' x='50%' dominant-baseline='top' text-anchor='middle' font-family='sans-serif' fill='white'>肖</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -37,10 +38,18 @@
                 <li><a href="#experience">校园经历</a></li>
                 <li><a href="#contact">联系方式</a></li>
             </ul>
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索全站内容...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
             <div class="nav-social">
-                <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                <!-- 请将 href="#" 替换为真实的个人主页链接 -->
+                <a href="#" class="social-icon" title="GitHub" onclick="event.preventDefault()"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon" title="LinkedIn" onclick="event.preventDefault()"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon" title="ResearchGate" onclick="event.preventDefault()"><i class="fab fa-researchgate"></i></a>
                 <button class="theme-toggle" id="themeToggle" title="切换深色模式">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -101,7 +110,7 @@
                 <div class="documents-section">
                     <h3 class="documents-title">📄 个人文档</h3>
                     <div class="documents-grid">
-                        <a href="成绩单+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="成绩单+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -111,7 +120,7 @@
                             </div>
                             <i class="fas fa-external-link-alt document-arrow"></i>
                         </a>
-                        <a href="个人陈述+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="个人陈述+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -121,7 +130,7 @@
                             </div>
                             <i class="fas fa-external-link-alt document-arrow"></i>
                         </a>
-                        <a href="个人简历+肖宏博+广东海洋大学.pdf" target="_blank" class="document-card">
+                        <a href="个人简历+肖宏博+广东海洋大学.pdf" target="_blank" rel="noopener noreferrer" class="document-card">
                             <div class="document-icon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
@@ -161,7 +170,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="个人主页形象.jpg" alt="肖宏博个人照片" class="profile-image">
+                <img src="广东海洋大学校徽高清图.png" alt="肖宏博个人照片" class="profile-image">
             </div>
         </div>
     </section>
@@ -345,10 +354,21 @@
                             <i class="fas fa-journal-whills"></i>
                             SCI论文 (在投)
                         </p>
+                        <div class="publication-summary">
+                            <h4><i class="fas fa-lightbulb"></i> 研究背景</h4>
+                            <p>锂硫电池因高理论比容量备受关注，但多硫化物穿梭效应和循环稳定性问题限制了其实际应用。本工作针对锂硫电池隔膜改性展开研究。</p>
+                            
+                            <h4><i class="fas fa-bullseye"></i> 研究目标</h4>
+                            <p>开发高效的隔膜改性策略，抑制多硫化物穿梭，提升电池循环寿命和倍率性能。</p>
+                            
+                            <h4><i class="fas fa-chart-line"></i> 主要成果</h4>
+                            <p>通过材料复合和结构设计，显著改善了电池的电化学性能，在0.2C倍率下展现出良好的循环稳定性。</p>
+                        </div>
                         <div class="publication-tags">
                             <span class="tag">锂硫电池</span>
                             <span class="tag">电化学</span>
                             <span class="tag">材料科学</span>
+                            <span class="tag">隔膜改性</span>
                         </div>
                     </div>
                 </div>
@@ -359,16 +379,30 @@
                     </div>
                     <div class="publication-content">
                         <div class="publication-type">发明专利</div>
-                        <h3 class="publication-title">一种智能车控制装置及方法</h3>
+                        <h3 class="publication-title">一种MOFs掺杂的Janus锂硫电池隔膜及制备方法</h3>
                         <p class="publication-authors">肖宏博, 等</p>
                         <p class="publication-venue">
                             <i class="fas fa-patent"></i>
                             发明专利 (在投)
                         </p>
+                        <div class="publication-summary">
+                            <h4><i class="fas fa-lightbulb"></i> 技术背景</h4>
+                            <p>针对锂硫电池中多硫化物穿梭导致的容量衰减问题，开发新型功能隔膜具有重要意义。</p>
+                            
+                            <h4><i class="fas fa-cogs"></i> 技术方案</h4>
+                            <p>采用Janus结构设计，结合MOFs材料的多孔特性，实现对多硫化物的有效吸附和催化转化。</p>
+                            
+                            <h4><i class="fas fa-chart-line"></i> 技术优势</h4>
+                            <p>该隔膜设计兼具物理阻挡和化学吸附作用，能够有效抑制多硫化物穿梭，同时保持良好的离子传导性能。</p>
+                            
+                            <h4><i class="fas fa-rocket"></i> 应用价值</h4>
+                            <p>有望应用于高性能锂硫电池制备，推动锂硫电池的实用化进程。</p>
+                        </div>
                         <div class="publication-tags">
-                            <span class="tag">PID控制</span>
-                            <span class="tag">智能车</span>
-                            <span class="tag">嵌入式</span>
+                            <span class="tag">锂硫电池</span>
+                            <span class="tag">MOFs材料</span>
+                            <span class="tag">Janus隔膜</span>
+                            <span class="tag">电化学</span>
                         </div>
                     </div>
                 </div>
@@ -385,10 +419,21 @@
                             <i class="fas fa-file-code"></i>
                             技术文档
                         </p>
+                        <div class="publication-summary">
+                            <h4><i class="fas fa-lightbulb"></i> 项目背景</h4>
+                            <p>自主导航是移动机器人的核心功能，涉及环境感知、定位建图、路径规划等多个技术模块。</p>
+                            
+                            <h4><i class="fas fa-cogs"></i> 技术方案</h4>
+                            <p>基于ROS机器人操作系统，集成激光雷达、深度相机等传感器，实现SLAM建图和自主导航功能。</p>
+                            
+                            <h4><i class="fas fa-chart-line"></i> 实现成果</h4>
+                            <p>成功在真实机器人平台上实现了环境建图、自主避障和定点导航功能。</p>
+                        </div>
                         <div class="publication-tags">
                             <span class="tag">ROS</span>
                             <span class="tag">SLAM</span>
                             <span class="tag">导航</span>
+                            <span class="tag">机器人</span>
                         </div>
                     </div>
                 </div>
@@ -400,136 +445,233 @@
         <div class="container">
             <h2 class="section-title">获奖荣誉</h2>
             
-            <div class="certificates-carousel-container">
-                <button class="carousel-btn carousel-prev" onclick="prevSlide()">
-                    <i class="fas fa-chevron-left"></i>
+            <div class="awards-tabs">
+                <button class="award-tab active" data-category="all" onclick="showAwardsCategory('all')">
+                    <i class="fas fa-th-large"></i> 全部
                 </button>
-                <div class="certificates-carousel">
-                    <div class="certificates-track" id="certificatesTrack">
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/巡航国一.jpg')">
-                            <img src="获奖证书/巡航国一.jpg" alt="巡航国一" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/24射击1.jpg')">
-                            <img src="获奖证书/24射击1.jpg" alt="射击国一" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/25算法精英.jpg')">
-                            <img src="获奖证书/25算法精英.jpg" alt="算法精英" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/145624国赛二等奖.jpg')">
-                            <img src="获奖证书/145624国赛二等奖.jpg" alt="国赛二等奖" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/145624省赛一等奖.jpg')">
-                            <img src="获奖证书/145624省赛一等奖.jpg" alt="省赛一等奖" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/创新湛江杯.jpg')">
-                            <img src="获奖证书/创新湛江杯.jpg" alt="创新湛江杯" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/肖宏博蓝桥杯.jpg')">
-                            <img src="获奖证书/肖宏博蓝桥杯.jpg" alt="蓝桥杯" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/4级.png')">
-                            <img src="获奖证书/4级.png" alt="英语四级" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/NCDA1.png')">
-                            <img src="获奖证书/NCDA1.png" alt="NCDA大赛" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/爱在广东.png')">
-                            <img src="获奖证书/爱在广东.png" alt="爱在广东" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251115001358_993_137.jpg')">
-                            <img src="获奖证书/微信图片_20251115001358_993_137.jpg" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251115001401_995_137.jpg')">
-                            <img src="获奖证书/微信图片_20251115001401_995_137.jpg" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/第七届中国高校智能机器人创意大赛选拔赛.jpg')">
-                            <img src="获奖证书/第七届中国高校智能机器人创意大赛选拔赛.jpg" alt="智能机器人创意大赛" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/在2023年第五届国际青年人工智能大赛-中国赛区选拔赛.jpg')">
-                            <img src="获奖证书/在2023年第五届国际青年人工智能大赛-中国赛区选拔赛.jpg" alt="国际青年人工智能大赛" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-07_22-45-28.png')">
-                            <img src="获奖证书/PixPin_2025-11-07_22-45-28.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_16-20-20.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_16-20-20.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_17-14-38.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_17-14-38.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_17-15-56.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_17-15-56.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-13_22-37-32.png')">
-                            <img src="获奖证书/PixPin_2025-11-13_22-37-32.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/PixPin_2025-11-15_15-44-58.png')">
-                            <img src="获奖证书/PixPin_2025-11-15_15-44-58.png" alt="获奖证书" class="carousel-image">
-                        </div>
-                        <div class="certificate-slide" onclick="openLightbox('获奖证书/微信图片_20251127213732_1196_137.jpg')">
-                            <img src="获奖证书/微信图片_20251127213732_1196_137.jpg" alt="获奖证书" class="carousel-image">
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-next" onclick="nextSlide()">
-                    <i class="fas fa-chevron-right"></i>
+                <button class="award-tab" data-category="scholarship" onclick="showAwardsCategory('scholarship')">
+                    <i class="fas fa-graduation-cap"></i> 奖学金
+                </button>
+                <button class="award-tab" data-category="skill" onclick="showAwardsCategory('skill')">
+                    <i class="fas fa-certificate"></i> 技术技能证书
+                </button>
+                <button class="award-tab" data-category="tech-competition" onclick="showAwardsCategory('tech-competition')">
+                    <i class="fas fa-robot"></i> 科创专业比赛
+                </button>
+                <button class="award-tab" data-category="design-competition" onclick="showAwardsCategory('design-competition')">
+                    <i class="fas fa-palette"></i> 设计兴趣比赛
+                </button>
+                <button class="award-tab" data-category="honor" onclick="showAwardsCategory('honor')">
+                    <i class="fas fa-star"></i> 荣誉称号
+                </button>
+                <button class="award-tab" data-category="software" onclick="showAwardsCategory('software')">
+                    <i class="fas fa-copyright"></i> 软著
                 </button>
             </div>
-            <div class="carousel-dots" id="carouselDots"></div>
             
-            <div class="awards-grid">
-                <div class="award-category">
-                    <h3><i class="fas fa-medal"></i> 国家级奖项</h3>
-                    <div class="award-list">
-                        <div class="award-item">
-                            <span class="award-year">2024.07</span>
-                            <span class="award-name">中国机器人及人工智能大赛(目标射击)全国一等奖</span>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2024.12</span>
-                            <span class="award-name">全球校园人工智能算法精英大赛（自主巡航）全国一等奖</span>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2025.08</span>
-                            <span class="award-name">中国计算机设计大赛全国二等奖</span>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2024</span>
-                            <span class="award-name">未来设计NCDA大赛国家三等奖</span>
+            <div class="awards-gallery" id="awardsGallery">
+                <div class="awards-grid" data-category="all">
+                    <div class="award-gallery-item scholarship" onclick="openLightbox('获奖证书/奖学金/2023-2024奖学金.jpg')">
+                        <img src="获奖证书/奖学金/2023-2024奖学金.jpg" alt="2023-2024奖学金" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2023-2024奖学金</span>
                         </div>
                     </div>
-                </div>
-                <div class="award-category">
-                    <h3><i class="fas fa-award"></i> 省级奖项</h3>
-                    <div class="award-list">
-                        <div class="award-item">
-                            <span class="award-year">2025.08</span>
-                            <span class="award-name">全国大学生电子设计大赛省级一等奖</span>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2024</span>
-                            <span class="award-name">华为ICT大赛网络赛道省一等奖</span>
+                    
+                    <div class="award-gallery-item skill" onclick="openLightbox('获奖证书/技术技能证书/六级证明.jpg')">
+                        <img src="获奖证书/技术技能证书/六级证明.jpg" alt="英语六级" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>英语六级</span>
                         </div>
                     </div>
-                </div>
-                <div class="award-category">
-                    <h3><i class="fas fa-star"></i> 荣誉称号</h3>
-                    <div class="award-list">
-                        <div class="award-item">
-                            <span class="award-year">2023, 2024</span>
-                            <span class="award-name">一等奖学金</span>
+                    <div class="award-gallery-item skill" onclick="openLightbox('获奖证书/技术技能证书/四级证明.jpg')">
+                        <img src="获奖证书/技术技能证书/四级证明.jpg" alt="英语四级" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>英语四级</span>
                         </div>
-                        <div class="award-item">
-                            <span class="award-year">2023, 2024</span>
-                            <span class="award-name">"三好学生标兵"</span>
+                    </div>
+                    <div class="award-gallery-item skill" onclick="openLightbox('获奖证书/技术技能证书/等级证书.jpg')">
+                        <img src="获奖证书/技术技能证书/等级证书.jpg" alt="等级证书" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>等级证书</span>
                         </div>
-                        <div class="award-item">
-                            <span class="award-year">2024</span>
-                            <span class="award-name">广东海洋大学"四创之星"</span>
+                    </div>
+                    
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/CRAIC2025国2_00.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/CRAIC2025国2_00.png" alt="CRAIC2025国2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>CRAIC2025国2</span>
                         </div>
-                        <div class="award-item">
-                            <span class="award-year">2024</span>
-                            <span class="award-name">竞赛单项奖学金</span>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/中国机器人及人工智能大赛国1_00.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/中国机器人及人工智能大赛国1_00.png" alt="中国机器人及人工智能大赛国1" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>中国机器人及人工智能大赛国1</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/中国机器人及人工智能大赛国2_00.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/中国机器人及人工智能大赛/中国机器人及人工智能大赛国2_00.png" alt="中国机器人及人工智能大赛国2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>中国机器人及人工智能大赛国2</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/中国高校智能机器人创意大赛选拔赛/第七届中国高校智能机器人创意大赛选拔赛省3.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/中国高校智能机器人创意大赛选拔赛/第七届中国高校智能机器人创意大赛选拔赛省3.jpg" alt="第七届中国高校智能机器人创意大赛选拔赛省3" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>第七届中国高校智能机器人创意大赛选拔赛省3</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全国大学生电子设计竞赛/电赛省一.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全国大学生电子设计竞赛/电赛省一.png" alt="电赛省一" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>电赛省一</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2023年第五届全球校园人工智能算法精英大赛国2.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2023年第五届全球校园人工智能算法精英大赛国2.jpg" alt="2023年第五届全球校园人工智能算法精英大赛国2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2023年第五届全球校园人工智能算法精英大赛国2</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2023年第五届全球校园人工智能算法精英大赛国3.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2023年第五届全球校园人工智能算法精英大赛国3.jpg" alt="2023年第五届全球校园人工智能算法精英大赛国3" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2023年第五届全球校园人工智能算法精英大赛国3</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2025AIC国赛二等奖获奖证书1_00.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2025AIC国赛二等奖获奖证书1_00.png" alt="2025AIC国赛二等奖" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2025AIC国赛二等奖</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2025AIC省赛二等奖获奖证书-赛区制1_00.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/2025AIC省赛二等奖获奖证书-赛区制1_00.png" alt="2025AIC省赛二等奖" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2025AIC省赛二等奖</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/24射击国优.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/24射击国优.jpg" alt="24射击国优" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>24射击国优</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/24年巡航国一.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/24年巡航国一.jpg" alt="24年巡航国一" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>24年巡航国一</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/25巡航国一.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/全球校园人工智能算法精英大赛/25巡航国一.jpg" alt="25巡航国一" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>25巡航国一</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/华为ICT大赛/ICT省一.png')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/华为ICT大赛/ICT省一.png" alt="ICT省一" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>ICT省一</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/国际青年人工智能大赛-中国赛区选拔赛/2023年第五届国际青年人工智能大赛-中国赛区选拔赛国一.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/国际青年人工智能大赛-中国赛区选拔赛/2023年第五届国际青年人工智能大赛-中国赛区选拔赛国一.jpg" alt="2023年第五届国际青年人工智能大赛-中国赛区选拔赛国一" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2023年第五届国际青年人工智能大赛-中国赛区选拔赛国一</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item tech-competition" onclick="openLightbox('获奖证书/比赛证书/科创专业比赛/蓝桥杯/蓝桥杯嵌入式赛道省2.jpg')">
+                        <img src="获奖证书/比赛证书/科创专业比赛/蓝桥杯/蓝桥杯嵌入式赛道省2.jpg" alt="蓝桥杯嵌入式赛道省2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>蓝桥杯嵌入式赛道省2</span>
+                        </div>
+                    </div>
+                    
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/中国好创意暨全国数字艺术设计大赛/25中国好创意暨全国数字艺术设计大赛广东省三等奖_00.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/中国好创意暨全国数字艺术设计大赛/25中国好创意暨全国数字艺术设计大赛广东省三等奖_00.png" alt="25中国好创意暨全国数字艺术设计大赛广东省三等奖" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>25中国好创意暨全国数字艺术设计大赛广东省三等奖</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/中国好创意暨全国数字艺术设计大赛/中国好创意（第十八届）暨全国数字艺术设计大赛省3.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/中国好创意暨全国数字艺术设计大赛/中国好创意（第十八届）暨全国数字艺术设计大赛省3.png" alt="中国好创意（第十八届）暨全国数字艺术设计大赛省3" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>中国好创意（第十八届）暨全国数字艺术设计大赛省3</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/中国计算机设计大赛/中国计算机设计大赛国2.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/中国计算机设计大赛/中国计算机设计大赛国2.png" alt="中国计算机设计大赛国2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>中国计算机设计大赛国2</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/中国计算机设计大赛/中国计算机设计大赛省3.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/中国计算机设计大赛/中国计算机设计大赛省3.png" alt="中国计算机设计大赛省3" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>中国计算机设计大赛省3</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/全国大学生数字媒体及科技作品大赛/145624国赛二等奖.jpg')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/全国大学生数字媒体及科技作品大赛/145624国赛二等奖.jpg" alt="145624国赛二等奖" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>145624国赛二等奖</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/全国大学生数字媒体及科技作品大赛/145624省赛一等奖.jpg')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/全国大学生数字媒体及科技作品大赛/145624省赛一等奖.jpg" alt="145624省赛一等奖" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>145624省赛一等奖</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/创新湛江杯/创新湛江杯（市优）.jpg')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/创新湛江杯/创新湛江杯（市优）.jpg" alt="创新湛江杯（市优）" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>创新湛江杯（市优）</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/新文科/新文科校银.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/新文科/新文科校银.png" alt="新文科校银" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>新文科校银</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/未来设计师全国高校数字艺术设计大赛全国总决赛/未来设计师国3.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/未来设计师全国高校数字艺术设计大赛全国总决赛/未来设计师国3.png" alt="未来设计师国3" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>未来设计师国3</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/未来设计师全国高校数字艺术设计大赛全国总决赛/未来设计师省2.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/未来设计师全国高校数字艺术设计大赛全国总决赛/未来设计师省2.png" alt="未来设计师省2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>未来设计师省2</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item design-competition" onclick="openLightbox('获奖证书/比赛证书/设计兴趣比赛/爱在广东/爱在广东省2.png')">
+                        <img src="获奖证书/比赛证书/设计兴趣比赛/爱在广东/爱在广东省2.png" alt="爱在广东省2" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>爱在广东省2</span>
+                        </div>
+                    </div>
+                    
+                    <div class="award-gallery-item honor" onclick="openLightbox('获奖证书/荣誉称号/2023-2024三好学生标兵.jpg')">
+                        <img src="获奖证书/荣誉称号/2023-2024三好学生标兵.jpg" alt="2023-2024三好学生标兵" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>2023-2024三好学生标兵</span>
+                        </div>
+                    </div>
+                    <div class="award-gallery-item honor" onclick="openLightbox('获奖证书/荣誉称号/创赛之星.jpg')">
+                        <img src="获奖证书/荣誉称号/创赛之星.jpg" alt="创赛之星" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>创赛之星</span>
+                        </div>
+                    </div>
+                    
+                    <div class="award-gallery-item software" onclick="openLightbox('获奖证书/软著/基于OPENCV的动态视觉识别系统.png')">
+                        <img src="获奖证书/软著/基于OPENCV的动态视觉识别系统.png" alt="基于OPENCV的动态视觉识别系统" loading="lazy">
+                        <div class="award-gallery-overlay">
+                            <span>基于OPENCV的动态视觉识别系统</span>
                         </div>
                     </div>
                 </div>
@@ -802,6 +944,45 @@
         </div>
     </section>
 
+    <section id="guestbook" class="section guestbook">
+        <div class="container">
+            <h2 class="section-title">访客留言板</h2>
+            <div class="guestbook-info">
+                <p>💬 欢迎留下您的宝贵留言！使用GitHub Issues作为后端，需要GitHub账号。</p>
+                <a href="https://github.com/hobert/akebi.github.io/issues/new?labels=guestbook&title=留言" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-github"></i> 前往留言
+                </a>
+            </div>
+            <div class="guestbook-messages" id="guestbookMessages">
+                <div class="guestbook-empty">
+                    <i class="fas fa-comments"></i>
+                    <p>暂无留言，来做第一个留言的人吧！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section resources">
+        <div class="container">
+            <h2 class="section-title">📚 开源资料</h2>
+            <div class="resources-info">
+                <p>欢迎下载和使用这些开源资料！</p>
+                <button class="btn btn-primary" onclick="openUploadModal()">
+                    <i class="fas fa-plus"></i> 上传新资料
+                </button>
+            </div>
+            <div class="resources-filters">
+                <button class="filter-btn active" onclick="filterResources('all')">全部</button>
+                <button class="filter-btn" onclick="filterResources('竞赛资料')">竞赛资料</button>
+                <button class="filter-btn" onclick="filterResources('代码库')">代码库</button>
+                <button class="filter-btn" onclick="filterResources('学习资料')">学习资料</button>
+                <button class="filter-btn" onclick="filterResources('开发模板')">开发模板</button>
+            </div>
+            <div class="resources-grid" id="resourcesGrid">
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title">联系方式</h2>
@@ -839,6 +1020,29 @@
         </div>
     </section>
 
+    <section class="section visitor-stats-section">
+        <div class="container">
+            <h2 class="section-title">访问统计</h2>
+            <div class="visitor-stats">
+                <div class="visitor-stat">
+                    <i class="fas fa-eye"></i>
+                    <span class="visitor-label">总访问量</span>
+                    <span class="visitor-number" id="totalVisits">0</span>
+                </div>
+                <div class="visitor-stat">
+                    <i class="fas fa-users"></i>
+                    <span class="visitor-label">今日访问</span>
+                    <span class="visitor-number" id="todayVisits">0</span>
+                </div>
+                <div class="visitor-stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="visitor-label">访问天数</span>
+                    <span class="visitor-number" id="visitDays">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 肖宏博. All rights reserved.</p>
@@ -852,7 +1056,76 @@
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content" id="lightboxImage">
+        <img id="lightbox-img" class="lightbox-content" alt="证书预览">
+    </div>
+
+    <div id="uploadModal" class="upload-modal">
+        <div class="upload-modal-content">
+            <span class="upload-modal-close" onclick="closeUploadModal()">&times;</span>
+            <h2 class="upload-modal-title">📤 上传新资料</h2>
+            
+            <div class="upload-drop-zone" id="uploadDropZone">
+                <div class="upload-drop-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>拖拽文件到此处</p>
+                    <p class="upload-or">或</p>
+                    <label class="upload-file-label">
+                        <input type="file" id="uploadFileInput" multiple>
+                        <span>选择文件</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="upload-file-list" id="uploadFileList"></div>
+            
+            <div class="upload-form">
+                <div class="form-group">
+                    <label for="resourceTitle">资料标题 *</label>
+                    <input type="text" id="resourceTitle" placeholder="请输入资料标题">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resourceDescription">资料描述 *</label>
+                    <textarea id="resourceDescription" rows="4" placeholder="请详细描述资料的内容和用途"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resourceCategory">资料分类 *</label>
+                        <select id="resourceCategory">
+                            <option value="">请选择分类</option>
+                            <option value="竞赛资料">竞赛资料</option>
+                            <option value="代码库">代码库</option>
+                            <option value="学习资料">学习资料</option>
+                            <option value="开发模板">开发模板</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resourceTags">标签（用逗号分隔）</label>
+                        <input type="text" id="resourceTags" placeholder="例如：电子设计, PCB, 单片机">
+                    </div>
+                </div>
+                
+                <div class="upload-actions">
+                    <button class="btn btn-secondary" onclick="closeUploadModal()">取消</button>
+                    <button class="btn btn-primary" onclick="generateResourceConfig()">
+                        <i class="fas fa-cog"></i> 生成配置
+                    </button>
+                </div>
+            </div>
+            
+            <div class="upload-result" id="uploadResult">
+                <h3>📋 生成的配置</h3>
+                <p class="upload-hint">请将以下配置复制到 open-resources.json 文件中，并将文件上传到 GitHub resources 文件夹</p>
+                <div class="upload-config-box">
+                    <pre id="uploadConfig"></pre>
+                </div>
+                <button class="btn btn-primary" onclick="copyConfig()">
+                    <i class="fas fa-copy"></i> 复制配置
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -940,6 +1213,28 @@
             }
         });
 
+        function showAwardsCategory(category) {
+            const tabs = document.querySelectorAll('.award-tab');
+            const items = document.querySelectorAll('.award-gallery-item');
+            
+            tabs.forEach(tab => {
+                if (tab.dataset.category === category) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+            
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.3s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
         const themeToggle = document.getElementById('themeToggle');
         const savedTheme = localStorage.getItem('theme');
 
@@ -950,13 +1245,141 @@
 
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             if (document.body.classList.contains('dark-mode')) {
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('theme', 'dark');
             } else {
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                 localStorage.setItem('theme', 'light');
+            }
+            updateCharts();
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchResults = document.getElementById('searchResults');
+
+        let searchData = [];
+
+        function initSearchData() {
+            const sections = document.querySelectorAll('section[id]');
+            searchData = [];
+            
+            sections.forEach(section => {
+                const sectionId = section.getAttribute('id');
+                const sectionTitle = section.querySelector('.section-title')?.textContent || sectionId;
+                
+                const sectionData = {
+                    id: sectionId,
+                    title: sectionTitle,
+                    section: sectionTitle,
+                    content: '',
+                    link: `#${sectionId}`
+                };
+                
+                const textElements = section.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, .journal-title, .project-title, .award-title');
+                textElements.forEach(el => {
+                    sectionData.content += ' ' + el.textContent;
+                });
+                
+                searchData.push(sectionData);
+            });
+            
+            if (records.length > 0) {
+                records.forEach(record => {
+                    searchData.push({
+                        id: `journal-${record.id}`,
+                        title: record.title,
+                        section: '研究日志',
+                        content: `${record.description || ''} ${getCategoryLabel(record.category)}`,
+                        link: '#journal',
+                        isJournal: true
+                    });
+                });
+            }
+        }
+
+        function performSearch(query) {
+            if (!query.trim()) {
+                searchResults.classList.remove('show');
+                return;
+            }
+            
+            const lowerQuery = query.toLowerCase();
+            const results = searchData.filter(item => {
+                return item.title.toLowerCase().includes(lowerQuery) ||
+                       item.content.toLowerCase().includes(lowerQuery) ||
+                       item.section.toLowerCase().includes(lowerQuery);
+            });
+            
+            displayResults(results, query);
+        }
+
+        function displayResults(results, query) {
+            if (results.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-search"></i>
+                        <p>没有找到"${escapeHtml(query)}"相关内容</p>
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = results.slice(0, 10).map(item => `
+                    <div class="search-result-item" onclick="goToResult('${item.link}')">
+                        <div class="search-result-title">${highlightText(item.title, query)}</div>
+                        <div class="search-result-section">${item.section}</div>
+                        <div class="search-result-preview">${highlightText(item.content.substring(0, 100), query)}...</div>
+                    </div>
+                `).join('');
+            }
+            
+            searchResults.classList.add('show');
+        }
+
+        function highlightText(text, query) {
+            if (!query.trim()) return escapeHtml(text);
+            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+            return escapeHtml(text).replace(regex, '<mark>$1</mark>');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        window.goToResult = function(link) {
+            searchResults.classList.remove('show');
+            searchInput.value = '';
+            document.querySelector(link).scrollIntoView({ behavior: 'smooth' });
+        };
+
+        let searchTimeout;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 300);
+        });
+
+        searchBtn.addEventListener('click', () => {
+            performSearch(searchInput.value);
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(searchInput.value);
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) {
+                searchResults.classList.remove('show');
             }
         });
 
@@ -1112,6 +1535,7 @@
             localStorage.setItem('journalRecords', JSON.stringify(localRecords));
             records = localRecords;
             renderRecords();
+            initSearchData();
         }
 
         function updateLocalRecord(id, record) {
@@ -1122,6 +1546,7 @@
                 localStorage.setItem('journalRecords', JSON.stringify(localRecords));
                 records = localRecords;
                 renderRecords(getCurrentFilter(), journalSearch.value);
+                initSearchData();
             }
         }
 
@@ -1218,6 +1643,7 @@
             }
 
             updateStats();
+            updateCharts();
         }
 
         function escapeHtml(text) {
@@ -1262,6 +1688,7 @@
             records = localRecords.filter(r => r.id != id);
             localStorage.setItem('journalRecords', JSON.stringify(records));
             renderRecords(getCurrentFilter(), journalSearch.value);
+            initSearchData();
         }
 
         function getCurrentFilter() {
@@ -1297,6 +1724,7 @@
                 loadFromLocal();
             }
             renderRecords(getCurrentFilter(), journalSearch.value);
+            initSearchData();
         }
 
         function loadFromLocal() {
@@ -1418,6 +1846,16 @@
             updateMonthlyChart();
         }
 
+        function getChartTheme() {
+            const isDark = document.body.classList.contains('dark-mode');
+            return {
+                textColor: isDark ? '#94a3b8' : '#4a4a6a',
+                barColor: isDark ? '#60a5fa' : '#0a2463',
+                barBorder: isDark ? '#93c5fd' : '#1e3a8a',
+                borderColor: isDark ? '#1e293b' : '#ffffff'
+            };
+        }
+
         function updateCategoryChart() {
             const ctx = document.getElementById('categoryChart').getContext('2d');
             const categoryData = {};
@@ -1427,9 +1865,10 @@
             const labels = Object.keys(categoryData).map(c => getCategoryLabel(c));
             const data = Object.values(categoryData);
             const colors = [
-                '#1e40af', '#166534', '#92400e', '#9d174d', 
+                '#1e40af', '#166534', '#92400e', '#9d174d',
                 '#6d28d9', '#0f766e', '#c2410c', '#1e3a8a'
             ];
+            const theme = getChartTheme();
             if (categoryChart) categoryChart.destroy();
             categoryChart = new Chart(ctx, {
                 type: 'doughnut',
@@ -1439,7 +1878,7 @@
                         data: data,
                         backgroundColor: colors.slice(0, labels.length),
                         borderWidth: 2,
-                        borderColor: '#fff'
+                        borderColor: theme.borderColor
                     }]
                 },
                 options: {
@@ -1447,11 +1886,13 @@
                     maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            position: 'bottom'
+                            position: 'bottom',
+                            labels: { color: theme.textColor }
                         },
                         title: {
                             display: true,
-                            text: '各类别工作时长分布'
+                            text: '各类别工作时长分布',
+                            color: theme.textColor
                         }
                     }
                 }
@@ -1468,6 +1909,7 @@
             const sortedMonths = Object.keys(monthlyData).sort();
             const labels = sortedMonths.map(m => m.replace('-', '年') + '月');
             const data = sortedMonths.map(m => monthlyData[m]);
+            const theme = getChartTheme();
             if (monthlyChart) monthlyChart.destroy();
             monthlyChart = new Chart(ctx, {
                 type: 'bar',
@@ -1476,8 +1918,8 @@
                     datasets: [{
                         label: '工作时长(小时)',
                         data: data,
-                        backgroundColor: '#0a2463',
-                        borderColor: '#1e3a8a',
+                        backgroundColor: theme.barColor,
+                        borderColor: theme.barBorder,
                         borderWidth: 1
                     }]
                 },
@@ -1487,23 +1929,23 @@
                     plugins: {
                         title: {
                             display: true,
-                            text: '每月工作时长趋势'
+                            text: '每月工作时长趋势',
+                            color: theme.textColor
+                        },
+                        legend: {
+                            labels: { color: theme.textColor }
                         }
                     },
                     scales: {
+                        x: { ticks: { color: theme.textColor } },
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            ticks: { color: theme.textColor }
                         }
                     }
                 }
             });
         }
-
-        const originalRenderRecords = renderRecords;
-        renderRecords = function(filter = 'all', searchText = '') {
-            originalRenderRecords(filter, searchText);
-            updateCharts();
-        };
 
         let currentSlide = 0;
         const slides = document.querySelectorAll('.certificate-slide');
@@ -1549,6 +1991,320 @@
         setInterval(() => {
             nextSlide();
         }, 4000);
+
+        function updateVisitorStats() {
+            const today = new Date().toDateString();
+            let stats = JSON.parse(localStorage.getItem('visitorStats') || '{"totalVisits": 0, "todayVisits": 0, "lastVisitDate": "", "visitDays": 0}');
+            
+            if (stats.lastVisitDate !== today) {
+                stats.todayVisits = 0;
+                stats.lastVisitDate = today;
+                stats.visitDays++;
+            }
+            
+            stats.totalVisits++;
+            stats.todayVisits++;
+            
+            localStorage.setItem('visitorStats', JSON.stringify(stats));
+            
+            document.getElementById('totalVisits').textContent = stats.totalVisits;
+            document.getElementById('todayVisits').textContent = stats.todayVisits;
+            document.getElementById('visitDays').textContent = stats.visitDays;
+        }
+
+        function loadGuestbook() {
+            const repo = 'hobert/akebi.github.io';
+            const guestbookMessages = document.getElementById('guestbookMessages');
+            
+            fetch(`https://api.github.com/repos/${repo}/issues?labels=guestbook&state=open&per_page=10`)
+                .then(response => response.json())
+                .then(issues => {
+                    if (issues.length === 0) {
+                        guestbookMessages.innerHTML = `
+                            <div class="guestbook-empty">
+                                <i class="fas fa-comments"></i>
+                                <p>暂无留言，来做第一个留言的人吧！</p>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    guestbookMessages.innerHTML = issues.map(issue => `
+                        <div class="guestbook-message">
+                            <div class="guestbook-message-header">
+                                <img src="${issue.user.avatar_url}" alt="${issue.user.login}" class="guestbook-avatar">
+                                <div class="guestbook-user-info">
+                                    <span class="guestbook-username">${issue.user.login}</span>
+                                    <span class="guestbook-date">${new Date(issue.created_at).toLocaleDateString('zh-CN')}</span>
+                                </div>
+                            </div>
+                            <div class="guestbook-message-content">
+                                ${issue.body}
+                            </div>
+                        </div>
+                    `).join('');
+                })
+                .catch(error => {
+                    console.error('加载留言失败:', error);
+                    guestbookMessages.innerHTML = `
+                        <div class="guestbook-empty">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>加载留言失败，请稍后再试</p>
+                        </div>
+                    `;
+                });
+        }
+
+        let allResources = [];
+        let currentFilter = 'all';
+
+        async function loadResources() {
+            try {
+                const response = await fetch('open-resources.json');
+                allResources = await response.json();
+                displayResources(allResources);
+            } catch (error) {
+                console.error('加载资料失败:', error);
+                document.getElementById('resourcesGrid').innerHTML = `
+                    <div style="text-align: center; padding: 60px; color: var(--text-light);">
+                        <i class="fas fa-exclamation-circle" style="font-size: 3rem; margin-bottom: 16px;"></i>
+                        <p>加载资料失败，请稍后再试</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayResources(resources) {
+            const resourcesGrid = document.getElementById('resourcesGrid');
+            
+            if (resources.length === 0) {
+                resourcesGrid.innerHTML = `
+                    <div style="text-align: center; padding: 60px; color: var(--text-light); grid-column: 1 / -1;">
+                        <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 16px;"></i>
+                        <p>暂无该类别的资料</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            resourcesGrid.innerHTML = resources.map(resource => `
+                <div class="resource-card" data-category="${resource.category}">
+                    <div class="resource-header">
+                        <h3 class="resource-title">${resource.title}</h3>
+                        <span class="resource-category">${resource.category}</span>
+                    </div>
+                    <p class="resource-description">${resource.description}</p>
+                    <div class="resource-tags">
+                        ${resource.tags.map(tag => `<span class="resource-tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="resource-meta">
+                        <div class="resource-meta-info">
+                            <div class="resource-meta-item">
+                                <i class="fas fa-file"></i>
+                                <span>${resource.fileSize}</span>
+                            </div>
+                            <div class="resource-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>${resource.uploadDate}</span>
+                            </div>
+                            <div class="resource-meta-item">
+                                <i class="fas fa-download"></i>
+                                <span>${resource.downloads} 次</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="${resource.fileUrl}" class="resource-download-btn" target="_blank" rel="noopener noreferrer" onclick="trackDownload('${resource.id}')">
+                        <i class="fas fa-download"></i>
+                        下载资料
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function filterResources(category) {
+            currentFilter = category;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            if (category === 'all') {
+                displayResources(allResources);
+            } else {
+                const filtered = allResources.filter(r => r.category === category);
+                displayResources(filtered);
+            }
+        }
+
+        function trackDownload(resourceId) {
+            let downloadStats = JSON.parse(localStorage.getItem('downloadStats') || '{}');
+            downloadStats[resourceId] = (downloadStats[resourceId] || 0) + 1;
+            localStorage.setItem('downloadStats', JSON.stringify(downloadStats));
+        }
+
+        let selectedFiles = [];
+
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+            resetUploadForm();
+        }
+
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function resetUploadForm() {
+            selectedFiles = [];
+            document.getElementById('uploadFileList').innerHTML = '';
+            document.getElementById('resourceTitle').value = '';
+            document.getElementById('resourceDescription').value = '';
+            document.getElementById('resourceCategory').value = '';
+            document.getElementById('resourceTags').value = '';
+            document.getElementById('uploadResult').classList.remove('show');
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function getFileIcon(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            const icons = {
+                'pdf': 'fa-file-pdf',
+                'zip': 'fa-file-archive',
+                'rar': 'fa-file-archive',
+                'doc': 'fa-file-word',
+                'docx': 'fa-file-word',
+                'xls': 'fa-file-excel',
+                'xlsx': 'fa-file-excel',
+                'ppt': 'fa-file-powerpoint',
+                'pptx': 'fa-file-powerpoint',
+                'py': 'fa-file-code',
+                'js': 'fa-file-code',
+                'html': 'fa-file-code',
+                'css': 'fa-file-code',
+                'c': 'fa-file-code',
+                'cpp': 'fa-file-code',
+                'java': 'fa-file-code',
+                'md': 'fa-file-alt'
+            };
+            return icons[ext] || 'fa-file';
+        }
+
+        function addFileToList(file) {
+            selectedFiles.push(file);
+            const fileList = document.getElementById('uploadFileList');
+            const fileItem = document.createElement('div');
+            fileItem.className = 'upload-file-item';
+            fileItem.innerHTML = `
+                <div class="upload-file-info">
+                    <i class="fas ${getFileIcon(file.name)} upload-file-icon"></i>
+                    <div>
+                        <div class="upload-file-name">${file.name}</div>
+                        <div class="upload-file-size">${formatFileSize(file.size)}</div>
+                    </div>
+                </div>
+                <button class="upload-file-remove" onclick="removeFile(${selectedFiles.length - 1}, this)">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            fileList.appendChild(fileItem);
+        }
+
+        function removeFile(index, btn) {
+            selectedFiles.splice(index, 1);
+            btn.closest('.upload-file-item').remove();
+        }
+
+        function generateResourceConfig() {
+            const title = document.getElementById('resourceTitle').value.trim();
+            const description = document.getElementById('resourceDescription').value.trim();
+            const category = document.getElementById('resourceCategory').value;
+            const tagsInput = document.getElementById('resourceTags').value.trim();
+            const tags = tagsInput ? tagsInput.split(',').map(t => t.trim()).filter(t => t) : [];
+
+            if (!title || !description || !category) {
+                alert('请填写所有必填项！');
+                return;
+            }
+
+            if (selectedFiles.length === 0) {
+                alert('请选择至少一个文件！');
+                return;
+            }
+
+            const today = new Date().toISOString().split('T')[0];
+            const totalSize = selectedFiles.reduce((sum, file) => sum + file.size, 0);
+            
+            const config = {
+                id: Date.now().toString(),
+                title: title,
+                description: description,
+                category: category,
+                tags: tags,
+                fileUrl: 'https://github.com/hobert/akebi.github.io/raw/main/resources/' + selectedFiles[0].name,
+                fileSize: formatFileSize(totalSize),
+                uploadDate: today,
+                downloads: 0
+            };
+
+            const configJson = JSON.stringify(config, null, 2);
+            document.getElementById('uploadConfig').textContent = configJson;
+            document.getElementById('uploadResult').classList.add('show');
+        }
+
+        function copyConfig() {
+            const configText = document.getElementById('uploadConfig').textContent;
+            navigator.clipboard.writeText(configText).then(() => {
+                alert('配置已复制到剪贴板！\n\n请按以下步骤操作：\n1. 将文件复制到 resources/ 文件夹\n2. 编辑 open-resources.json，粘贴配置\n3. 提交并推送到 GitHub');
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制！');
+            });
+        }
+
+        const dropZone = document.getElementById('uploadDropZone');
+        const fileInput = document.getElementById('uploadFileInput');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = Array.from(e.dataTransfer.files);
+            files.forEach(file => addFileToList(file));
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            files.forEach(file => addFileToList(file));
+            fileInput.value = '';
+        });
+
+        document.getElementById('uploadModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('uploadModal')) {
+                closeUploadModal();
+            }
+        });
+
+        updateVisitorStats();
+        loadGuestbook();
+        loadResources();
     </script>
 </body>
 </html>
