@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "论文原稿",
+    "description": "锂硫电池隔膜改性研究进展论文原稿，包含详细的研究背景、实验设计和结果分析",
+    "category": "学习资料",
+    "tags": ["锂硫电池", "电化学", "论文"],
+    "fileUrl": "https://github.com/hobert/akebi.github.io/raw/main/resources/论文原稿.docx",
+    "fileSize": "待上传",
+    "uploadDate": "2026-03-09",
+    "downloads": 0
+  },
+  {
+    "id": "2",
+    "title": "电子设计大赛资料包",
+    "description": "全国大学生电子设计大赛相关资料，包含原理图、PCB设计、源代码和参考资料",
+    "category": "竞赛资料",
+    "tags": ["电子设计", "PCB", "单片机"],
+    "fileUrl": "https://github.com/hobert/akebi.github.io/raw/main/resources/电子设计大赛资料包.zip",
+    "fileSize": "25.5 MB",
+    "uploadDate": "2026-03-01",
+    "downloads": 128
+  },
+  {
+    "id": "3",
+    "title": "机器人竞赛代码库",
+    "description": "中国机器人及人工智能大赛参赛代码，包含目标识别、路径规划和控制算法",
+    "category": "代码库",
+    "tags": ["机器人", "人工智能", "Python"],
+    "fileUrl": "https://github.com/hobert/akebi.github.io/raw/main/resources/机器人竞赛代码库.zip",
+    "fileSize": "12.8 MB",
+    "uploadDate": "2026-02-15",
+    "downloads": 86
+  },
+  {
+    "id": "4",
+    "title": "学习笔记合集",
+    "description": "电子科学与技术专业学习笔记，包含数电、模电、信号与系统等",
+    "category": "学习资料",
+    "tags": ["学习笔记", "数电", "模电"],
+    "fileUrl": "https://github.com/hobert/akebi.github.io/raw/main/resources/学习笔记合集.pdf",
+    "fileSize": "8.2 MB",
+    "uploadDate": "2026-01-20",
+    "downloads": 234
+  },
+  {
+    "id": "5",
+    "title": "项目模板集合",
+    "description": "常用项目开发模板，包含Keil、STM32、Arduino等",
+    "category": "开发模板",
+    "tags": ["STM32", "Arduino", "Keil"],
+    "fileUrl": "https://github.com/hobert/akebi.github.io/raw/main/resources/项目模板集合.zip",
+    "fileSize": "45.2 MB",
+    "uploadDate": "2026-02-28",
+    "downloads": 156
+  }
+]
